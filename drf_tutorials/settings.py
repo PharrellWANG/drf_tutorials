@@ -79,8 +79,15 @@ WSGI_APPLICATION = 'drf_tutorials.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'drf_tutorials',
+        'USER': 'root',
+        'PASSWORD': 'bitnami',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        # 'TEST': {
+        #     'NAME': 'test_db_for_peerloan',
+        # },
     }
 }
 
