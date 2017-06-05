@@ -25,7 +25,7 @@ SECRET_KEY = '&+#)m*x+v(9^ut=k==&ib57zp_3r)c7-_vvje=5nk)7xwxky+v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,10 @@ INSTALLED_APPS = (
     'rest_framework',
     'snippets',
 )
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
